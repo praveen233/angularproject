@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row" >
+    <div class="col-md-4">
+      <div class="panel panel-default"*ngFor="let car of allcar" let i=index; >
+        <div class="panel-heading">{{car.model}}</div>
+        <div class="panel-body">{{car.price}}</div>
+        <div class="panel-footer"><button class="btn btn-primary" (clcik)="passtochild(i)">view more</button></div>
+      </div>
+    </div>
+    <div class="col-md-8">
+        <app-car [carData]="mycardetails"></app-car>
+    </div>
+  </div>
+</div>
+
+

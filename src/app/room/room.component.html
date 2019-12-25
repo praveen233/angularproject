@@ -1,0 +1,28 @@
+<p>
+  room works!
+</p>
+<div class="container">
+  <div class="row" *ngFor="let car of allcar">
+    <div class="col-md-4" >
+      <table class="table table-bordered">
+        <tr>
+          <td>
+            <p><b>{{car.model}}</b></p>
+            <p>{{car.price}}</p>
+            <p>{{car.version}}</p>
+            <p>{{car.fueltype}}</p>
+          </td>
+          <td>
+            <p><b>{{car.mileage}}</b></p> 
+            <p>category:{{car.category.vechicleType}}</p>
+            <p>status:{{car.status.isServiceDone}}</p>
+            <p>status:{{car.bootSize}}</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-8">
+      <img src="http://cybotrix.com/ios/img/{{car.image}}" style="height: 120px; width:120px">
+    </div>
+  </div>
+</div>

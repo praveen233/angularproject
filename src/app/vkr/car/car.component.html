@@ -1,0 +1,37 @@
+<div class="row" *ngIf="carinfo.price">
+  <div class="col-md-12">
+    <h1>{{carinfo.model}}</h1>
+  </div>
+
+  <div class="col-md-4 form-group" >
+      <img src="http://cybotrix.com/ios/img/{{carinfo.image}}" style="height: 120px; width:120px"> 
+    </div>
+    <div class="col-md-4 form-group" > 
+      <table class="table table-bordered">
+        <caption>Description</caption>
+        <tr>
+          <td>
+            <p><b>{{carinfo.model}}</b></p>
+            <p>{{carinfo.price}}</p>
+            <p>{{carinfo.version}}</p>
+            <p>{{carinfo.fueltype}}</p>
+          </td>
+          <td>
+            <p><b>{{carinfo.mileage}}</b></p> 
+            <p>category:{{carinfo.category.vechicleType}}</p>
+            <p>status:{{carinfo.status.isServiceDone}}</p>
+            <p>status:{{carinfo.bootSize}}</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+      <div class="col-md-4 form-group" >
+      <table class="table table-bordered">
+        <caption>service history({{carinfo.serviceHistory.length}})</caption>
+        <tr class="info" *ngFor="let service of carinfo.serviceHistory">
+          <td>service cost:{{service.serviceCost}}</td>
+          <td>service date:{{service.serviceDate}}</td>
+        </tr>
+      </table>
+    </div>
+</div>
